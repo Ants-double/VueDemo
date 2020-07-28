@@ -14,11 +14,13 @@ export default new Router({
       name: "HelloWorld",
       component: HelloWorld
     },
-    { path: "/", name: "Login", component: Login,props:true },
+    { path: "/", name: "Login", component: Login,props:{msgJson:{ msg: "头部传参", msgFlog: true }} },
     {
       path: "/Home",
       name: "Home",
-      component: Home,props:true
+      
+      component: Home,
+      props:{msgJson: { msg: "头部传参", msgFlog: true }}
     }
   ]
 });

@@ -12,7 +12,7 @@
       <el-button type="info">重置</el-button>
     </el-form>
     <button @click="demoClick">tes434444444t</button>
-    <Home :msgJsonApp="msgJson" :author="myName"></Home>
+    <Home :msgJson="msgJson" :author="myName"></Home>
   </div>
 </template>
 <script>
@@ -42,11 +42,11 @@ export default {
         .then(res => {
           console.log(res);
           this.$router.push({
-            path: "/Home",
-            params: {
-              name: "name",
-              dataObj: this.msgJson
-            },
+            name: "Home",
+            // params: {
+            //   name: "name",
+            //   dataObj: this.msgJson
+            // },
             props: { msgJson: this.msgJson }
           });
         })
